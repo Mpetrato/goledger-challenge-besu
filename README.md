@@ -41,6 +41,6 @@ docker-compose up
 	- Endpoint: "localhost:3000/api/v1/contract/check"
 
 
-## Diagrama representando os endpoints
+## Endpoints diagram
 
 ![Diagrama de fluxo](estrutura.png)
