@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Mpetrato/goledger-challenge-besu/database"
+	"github.com/Mpetrato/goledger-challenge-besu/helpers"
 	"github.com/Mpetrato/goledger-challenge-besu/router"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
@@ -11,6 +12,7 @@ import (
 )
 
 func main() {
+	loadEnvs()
 	db, err := database.InitDatabase()
 	if err != nil {
 		fmt.Printf("error on initDatabase -> %v", err)
@@ -30,4 +32,17 @@ func setupRoutes(app *fiber.App, db *gorm.DB) {
 
 	contractGroup := api.Group("/contract")
 	router.InitContractRouter(contractGroup, db)
+}
+
+func loadEnvs() {
+	_, err := helpers.GetOSEnv("CONTRACT_ADDRESS")
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
+	_, err = helpers.GetOSEnv("PRIVATE_KEY")
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
 }
