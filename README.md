@@ -12,9 +12,9 @@ cd besu
 ./startDev.sh
 ```
 
-Get the deploy address on **"SimpleStorageModule"** after startDev finish, and set the value to **docker-compose.yml** enviroment **"CONTRACT_ADDRESS"**.
+Get the deploy address on **"SimpleStorageModule"** after startDev finish, and set the value to **/api/docker-compose.yml** enviroment **"CONTRACT_ADDRESS"**.
 
-Get the **privateKey** on **/besu/genesis/genesis.json** and set the value on **docker-compose.yml** enviroment **"PRIVATE_KEY"**.
+Get the **privateKey** on **/besu/genesis/genesis.json** and set the value on **/api/docker-compose.yml** enviroment **"PRIVATE_KEY"**.
 
 ### To run the project use the following command:
 
