@@ -1,0 +1,7 @@
+root = "."
+tmp_dir = "tmp"
+build = "main.go"
+exclude_dir = ["tmp"]
+
+[log]
+level = "info"
