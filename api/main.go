@@ -1,19 +1,24 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/Mpetrato/goledger-challenge-besu/database"
 	"github.com/Mpetrato/goledger-challenge-besu/router"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"gorm.io/gorm"
 )
 
 func main() {
 	db, err := database.InitDatabase()
 	if err != nil {
+		fmt.Printf("error on initDatabase -> %v", err)
 		panic(err)
 	}
 
 	app := fiber.New()
+	app.Use(logger.New())
 
 	setupRoutes(app, db)
 
