@@ -40,3 +40,7 @@ docker-compose up
 	- method: "GET"
 	- Endpoint: "localhost:3000/api/v1/contract/check"
 
+
+## Diagrama representando os endpoints
+
+![Diagrama de fluxo](estrutura.png)
