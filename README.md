@@ -24,19 +24,19 @@ docker-compose up
 ```
 
 ## Endpoints
-		1. **SET:**
-			- method: "POST"
-			- Endpoint: "localhost:3000/api/v1/contract"
+1. **SET:**
+	- method: "POST"
+	- Endpoint: "localhost:3000/api/v1/contract"
 
-		2. **GET:**
-			- method: "GET"
-			- Endpoint: "localhost:3000/api/v1/contract"
+2. **GET:**
+	- method: "GET"
+	- Endpoint: "localhost:3000/api/v1/contract"
 
-		3. **SYNC:**
-			- method: "POST"
-			- Endpoint: "localhost:3000/api/v1/contract/sync"
+3. **SYNC:**
+	- method: "POST"
+	- Endpoint: "localhost:3000/api/v1/contract/sync"
 
-		4. **CHECK:**
-			- method: "GET"
-			- Endpoint: "localhost:3000/api/v1/contract/check"
+4. **CHECK:**
+	- method: "GET"
+	- Endpoint: "localhost:3000/api/v1/contract/check"
 
