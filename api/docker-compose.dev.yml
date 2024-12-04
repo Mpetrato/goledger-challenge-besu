@@ -8,8 +8,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - ENV=production
+      - ENV=development
       - DATABASE_URL=postgresql://admin:admin@postgres:5432/maindb
+      - BESU_NODE_URL=http://besu-node-0:8545
+      - CONTRACT_ADDRESS=
+      - PRIVATE_KEY=
     volumes:
       - .:/app
       - /app/tmp
@@ -29,6 +32,8 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - besu_network
 
 volumes:
   postgres_data:
